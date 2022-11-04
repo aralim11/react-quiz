@@ -11,7 +11,7 @@ function Signup(){
         <>
             <h1>Create an account</h1>
             <div className="column">
-                <Illustration image={signupImage} altText={Signup}/>
+                <Illustration image={signupImage} altText="Signup"/>
             
                 <Form className={`${styles.signup}`}>
                     <TextInput type="text" placeHolder="Enter Name" icon="person" />

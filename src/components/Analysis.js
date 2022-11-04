@@ -1,5 +1,5 @@
 import Question from './Question';
-import styles from './../styles/Analysis.module.js';
+import styles from './../styles/Analysis.module.css';
 
 function Analysis(){
     return(

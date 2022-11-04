@@ -1,16 +1,10 @@
 import './../styles/App.css';
-import Layout from './Layout';
-// import Home from './pages/Home';
-// import Signup from './pages/Signup';
-// import Login from './pages/Login';
-// import Quiz from './pages/Quiz';
-import Result from './pages/Result';
+import routes from './routes';
+import {RouterProvider} from "react-router-dom";
 
 function App() {
   return (
-    <Layout>
-      <Result></Result>
-    </Layout>
+      <RouterProvider router={routes} />
   );
 }
 

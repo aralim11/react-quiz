@@ -9,7 +9,7 @@ function Login(){
     return(
         <>
             <h1>Login to your account</h1>
-            <div class="column">
+            <div className="column">
                 <Illustration image={loginImage} altText="Login"/>
 
                 <Form className={`${styles.login}`}>

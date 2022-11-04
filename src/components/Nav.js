@@ -1,6 +1,7 @@
 import Account from "./Account";
 import styles from './../styles/Nav.module.css';
 import logo from './../assets/images/logo-bg.png';
+import { Link } from "react-router-dom";
 
 
 function Nav(){
@@ -8,10 +9,10 @@ function Nav(){
         <nav className={styles.nav}>
             <ul>
                 <li>
-                    <a href="index.html" className={styles.brand}>
+                    <Link to="/" className={styles.brand}>
                         <img src={logo} alt="Learn with Sumit Logo" />
                         <h3>Learn with Sumit</h3>
-                    </a>
+                    </Link>
                 </li>
             </ul>
             <Account />
