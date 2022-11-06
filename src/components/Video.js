@@ -11,7 +11,7 @@ function Video(){
                     <p>10 Questions</p>
                     <p>Score : Not taken yet</p>
                 </div>
-            </div><div></div>
+            </div>
         </a>
     )
 }
