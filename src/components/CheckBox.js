@@ -1,8 +1,8 @@
 
-function CheckBox({text, className}){
+function CheckBox({text, className, ...rest}){
     return(
         <label className={className}>
-            <input type="checkbox" />
+            <input type="checkbox" {...rest}/>
             <span> {text}</span>
         </label>
     )

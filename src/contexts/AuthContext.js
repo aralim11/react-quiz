@@ -11,7 +11,7 @@ export function useAuth(){
 export function AuthProvider({children}){
     const [currentUser, setCurrentUser] = useState();
 
-    async function signUp(email, password, username){
+    async function signUpSubmit(username, email, password){
         const auth = getAuth();
         await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(auth.currentUser, {displayName: username});
@@ -31,7 +31,7 @@ export function AuthProvider({children}){
 
     const value = {
         currentUser,
-        signUp,
+        signUpSubmit,
         login,
         logout,
     }
