@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from './../contexts/AuthContext';
 
 function Account(){
-    const {currentUser, logout} = useAuth;
+    const {currentUser, logout} = useAuth();
     return(
         <div className={styles.account}>
             {currentUser ? (

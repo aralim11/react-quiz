@@ -32,7 +32,7 @@ function Signup(){
             nevigate('/');
         } catch (error) {
             console.log(error);
-            setError("Error");
+            setError("Failed To Signup!!");
         }
     }
 
@@ -49,7 +49,7 @@ function Signup(){
                     <TextInput type="password" required placeHolder="Confirm password" icon="lock_clock" value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
                     <CheckBox text="I agree to the Terms & Conditions" required value={agree} onChange={(e) => setAgree(e.target.value)}/>
                     <Button type="submit">Submit</Button>
-                    <p className='error'>{error ? error : ''}</p>                    
+                    {error && <p className='error'>{error}</p>}                  
                     <div className="info">
                         Already have an account? <a href="login.html">Login</a> instead.
                     </div>
