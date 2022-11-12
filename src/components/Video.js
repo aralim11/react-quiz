@@ -1,14 +1,13 @@
-import image from './../assets/images/3.jpg';
 import styles from './../styles/Video.module.css';
 
-function Video(){
+function Video({title, noq, id}){
     return(
         <div className={styles.video}>
-            <img src={image} alt="" />
-            <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+            <img src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`} alt={title} />
+            <p>{title}</p>
             <div className={styles.qmeta}>
-                <p>10 Questions</p>
-                <p>Score : Not taken yet</p>
+                <p>{noq} Questions</p>
+                <p>Total points : {noq * 5}</p>
             </div>
         </div>
     )
