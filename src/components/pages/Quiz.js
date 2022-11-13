@@ -2,8 +2,15 @@
 import Answers from './../Answers';
 import ProgressBar from './../ProgressBar';
 import MiniPlayer from './../MiniPlayer';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import useQuestions from '../../hooks/useQuestions';
 
 function Quiz(){
+    const {id} = useParams();
+    const {loading, error, questions} = useQuestions(id);
+    const [currentQuestion, setQuestion] = useState(0);
+
     return(
         <>
             <h1>Pick three of your favorite Star Wars Flims</h1>

@@ -22,7 +22,7 @@ import PublicRoute from "./PublicRoute";
       element: (<Layout><PublicRoute><Login/></PublicRoute></Layout>),
     },
     {
-      path: "/quiz",
+      path: "/quiz/:id",
       element: (<Layout><PrivateRoute><Quiz/></PrivateRoute></Layout>),
     },
     {
