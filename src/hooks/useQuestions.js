@@ -20,6 +20,7 @@ function useQuestions(videoID){
                 setError(false);
                 setLoading(true);
                 const snapshot = await get(quizQuery);
+                setLoading(false);
                 if (snapshot.exists()) {
                     setQuestions((prevQuestions) => {
                         return [...prevQuestions, ...Object.values(snapshot.val())];

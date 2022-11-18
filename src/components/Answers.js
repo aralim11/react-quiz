@@ -1,10 +1,10 @@
 import CheckBox from './CheckBox';
 import styles from './../styles/Answers.module.css';
 
-function Answers(){
+function Answers({options = [], handleChange}){
     return(
         <div className={styles.answers}>
-            <CheckBox text="A New Hope 1" className={styles.answer}/>
+            {options.map((option, index) => (<CheckBox text={option.title} value={index} className={styles.answer} checked={option.checked} onChange={(e) => handleChange(e, index)}/>))}
         </div>
     )
 }
