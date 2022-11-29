@@ -26,7 +26,7 @@ import PublicRoute from "./PublicRoute";
       element: (<Layout><PrivateRoute><Quiz/></PrivateRoute></Layout>),
     },
     {
-      path: "/result",
+      path: "/result/:id",
       element: (<Layout><PrivateRoute><Result/></PrivateRoute></Layout>),
     },
 ]);
